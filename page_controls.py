@@ -11,9 +11,10 @@ def add_page():
     blog_title = ''.join(txttitle)
 
     filename = input("Enter new page markdown file: ")
+    filepath = "./md_pages/" + filename;
     with open(f"./api/templates/pages/{filename.split('.')[0]}.html", 'w') as file:
         file.write("")
-    nav, title, content = converter.convert_markdown_file(filename)
+    nav, title, content = converter.convert_markdown_file(filepath)
     update_paths(filename)
 
     styles = """<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">"""

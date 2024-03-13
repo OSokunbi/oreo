@@ -76,14 +76,14 @@ def refresh_blog(filename):
     print("Refreshed", html_filename)
 
 def refresh_page(filename):
-
+    filepath = "./md_pages/" + filename;
     with open("title.txt", "r") as file :
         txttitle = file.readlines()
     blog_title = ''.join(txttitle)
 
     with open(f"./api/templates/pages/{filename.split('.')[0]}.html", 'w') as file:
         file.write("")
-    nav, title, content = converter.convert_markdown_file(filename)
+    nav, title, content = converter.convert_markdown_file(filepath)
     update_paths(filename)
 
     styles = """<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">"""
@@ -120,7 +120,7 @@ def refresh_page(filename):
 
 def refresh_all_pages():
     html_folder = "./api/templates/pages/"
-    md_folder = "./"
+    md_folder = "./md_pages/"
     homeset.delete_html_files_without_md(html_folder, md_folder)
     special_files = ['home.html', 'dir.html']
     folder_path = "./api/templates/pages/"

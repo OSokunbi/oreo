@@ -14,7 +14,7 @@ def update_home():
         txttitle = file.readlines()
     blog_title = ''.join(txttitle)
 
-    with open("home.md", 'r') as file:
+    with open("./md_pages/home.md", 'r') as file:
         homecontent = file.readlines()
     home = ''.join(homecontent)
     content = markdown.markdown(home)
@@ -153,48 +153,3 @@ def delete_html_files_without_md(html_folder, md_folder):
                 html_file_path = os.path.join(html_folder, html_file)
                 os.remove(html_file_path)
                 print(f"Deleted {html_file} because corresponding .md file doesn't exist.")
-
-def update_songs():
-    with open("title.txt", "r") as file :
-        txttitle = file.readlines()
-    blog_title = ''.join(txttitle)
-
-    with open('music.md', 'r') as file:
-        md_content = file.read()
-    music_desc = ''.join(md_content)
-    content = markdown.markdown(music_desc)
-
-    # styles
-    styles = """<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">"""
-    style = """<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">"""
-
-    # nav
-    nav = su.webify_nav()
-    formatted_blog = f"""
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{blog_title}</title>
-        {style}
-        {styles}
-        </head>
-        <header>
-        <a class="title" href=""> <h1> {blog_title} </h1> </a>
-        {nav}
-        </header>
-    <main>
-        {content}
-    </main>
-    <footer style="padding:25px 0;">
-        <span>
-        by <a href="https://oresokunbi.org">Ore ʕっʘ‿ʘʔっ</a>
-        </span>
-    </footer>
-        </html>
-        """
-    with open("./api/templates/pages/music.html", 'w') as file:
-        file.write(formatted_blog)
-
-    print(f"Music page updated successfully!")

@@ -9,48 +9,6 @@ with open("title.txt", "r") as file :
     txttitle = file.readlines()
 blog_title = ''.join(txttitle)
 
-def update_projects():
-    with open("./projects.md", 'r') as file:
-        project_items = file.readlines()
-    projects = ''.join(project_items)
-
-    codehilite_extension = CodeHiliteExtension(css_class='codehilite', linenums=False)
-    nav = su.webify_nav()
-    content = markdown.markdown(projects, extensions=[codehilite_extension, 'fenced_code'])
-
-    filename = "./api/templates/pages/projects.html"
-    formatted_blog = f"""
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projects | ᕕʕ •.• ʔ୨ oreoluwa's blog</title>
-        <link rel="stylesheet" type="text/css" href="{{{{ url_for('static', filename='styles.css') }}}}">
-        <link rel="stylesheet" type="text/css" href="{{{{ url_for('static', filename='style.css') }}}}">
-    </head>
-    <header>
-    <a class="title" href=""> <h1> {blog_title} </h1> </a>
-        {nav}
-    </header>
-    <main>
-        <body>
-            {content}
-        </body>
-    </main>
-    <footer style="padding:25px 0;">
-        <span>
-        by <a href="https://oresokunbi.org">Ore ʕっʘ‿ʘʔっ</a>
-        </span>
-    </footer>
-    </html>
-    """
-    with open(filename, 'w') as file:
-        file.write(formatted_blog)
-
-    print(f"Projects page updates!")
-
-
 def convert_markdown_file(filename):
     with open(filename, 'r') as file:
         lines = file.readlines()
