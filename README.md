@@ -16,6 +16,8 @@ git remote add origin https://github.com/YOU/YOUR_GITHUB_REPO_NAME
 git push -u origin main
 ```
 
+after doing this delete the README.md file
+
 ### getting started
 all pages and blogs in oreos are written in [markdown syntax](https://www.markdownguide.org/basic-syntax/)
 
