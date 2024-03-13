@@ -1,6 +1,4 @@
-ʕ •ᴥ•ʔ How to Install Oreo
-2024-03-01
-### installing oreo
+### installing and using oreo
 to get started on installing and creating your blogs using oreo first create a githu repo. then create a [clone](http://github.com/OSokunbi/) of the oreo github repo. then open up your cloned repo using your code editor of choice.
 
 now follow these commands:
