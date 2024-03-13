@@ -17,6 +17,8 @@ git push -u origin main
 ```
 
 ### getting started
+all pages and blogs in oreos are written in [markdown syntax](https://www.markdownguide.org/basic-syntax/)
+
 to get started run the following command:
 
 ```
@@ -78,3 +80,35 @@ exit
 ```
 
 this will exit out of oreo as well as update your blog push all the changes to your blog's github repo
+
+## structures
+
+### md_blogs structure
+here is the structure for how your markdown blogs should look:
+```
+First line : (Blog Title)
+Second Line: (Date in this format: 2024-03-04)
+(write here)
+```
+
+here's an example:
+
+```
+Example Blog
+2024-01-01
+(write markdown syntax here)
+```
+
+### page structures
+here is the structure for how your markdown blogs should look:
+```
+First line : (Page Title for Navbar)
+(write here)
+```
+
+here's an example:
+
+```
+Books
+(write markdown syntax here)
+```
