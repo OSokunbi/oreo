@@ -63,7 +63,7 @@ update dir
 ```
 
 #### add page
-this command will add another page to your blog site. to run this command in oreo you must first create a new markdown file for your new page in the root directory and run:
+this command will add another page to your blog site. to run this command in oreo you must first create a new markdown file for your new page in the md_pages folder and run:
 
 ```
 add page
