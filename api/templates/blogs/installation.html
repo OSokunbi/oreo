@@ -38,8 +38,16 @@
             </p>
             <body>
             <h3>installing oreo</h3>
-<p>to get started on installing and creating your blogs using oreo first create a githu repo. then create a <a href="http://github.com/OSokunbi/">clone</a> of the oreo github repo. then open up your cloned repo using your code editor of choice. you must then change the repo's origin's to your own, so that when you push changes it will push to your own blogging repo URL:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>http://github.com/YOU/YOUR_REPO
+<p>to get started on installing and creating your blogs using oreo first create a githu repo. then create a <a href="http://github.com/OSokunbi/">clone</a> of the oreo github repo. then open up your cloned repo using your code editor of choice.</p>
+<p>now follow these commands:</p>
+<div class="codehilite"><pre><span></span><code>git remote remove origin
+rm -rf .git
+git init
+git branch -M main
+git add -A
+git commit -m &quot;initial commit&quot;
+git remote add origin https://github.com/YOU/YOUR_GITHUB_REPO_NAME
+git push -u origin main
 </code></pre></div>
 
 <h3>getting started</h3>

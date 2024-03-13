@@ -1,10 +1,19 @@
 ʕ •ᴥ•ʔ How to Install Oreo
 2024-03-01
 ### installing oreo
-to get started on installing and creating your blogs using oreo first create a githu repo. then create a [clone](http://github.com/OSokunbi/) of the oreo github repo. then open up your cloned repo using your code editor of choice. you must then change the repo's origin's to your own, so that when you push changes it will push to your own blogging repo URL:
+to get started on installing and creating your blogs using oreo first create a githu repo. then create a [clone](http://github.com/OSokunbi/) of the oreo github repo. then open up your cloned repo using your code editor of choice.
+
+now follow these commands:
 
 ```
-$ git remote set-url origin http://github.com/YOU/YOUR_REPO
+git remote remove origin
+rm -rf .git
+git init
+git branch -M main
+git add -A
+git commit -m "initial commit"
+git remote add origin https://github.com/YOU/YOUR_GITHUB_REPO_NAME
+git push -u origin main
 ```
 
 ### getting started
