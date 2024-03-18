@@ -39,7 +39,7 @@ def add_page():
     </main>
     <footer style="padding:25px 0;">
         <span>
-        by <a href="https://oresokunbi.org">Ore ʕっʘ‿ʘʔっ</a>
+        built with <a href="https://github.com/OSokunbi/oreo">oreo</a>
         </span>
     </footer>
         </html>

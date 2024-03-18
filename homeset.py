@@ -40,7 +40,7 @@ def update_home():
     </main>
     <footer style="padding:25px 0;">
         <span>
-        by <a href="https://oresokunbi.org">Ore ʕっʘ‿ʘʔっ</a>
+        built with <a href="https://github.com/OSokunbi/oreo">oreo</a>
         </span>
     </footer>
         </html>
@@ -122,7 +122,7 @@ def update_dir():
         </main>
         <footer style="padding:25px 0;">
             <span>
-            by <a href="https://oresokunbi.org">Ore ʕっʘ‿ʘʔっ</a>
+            built with <a href="https://github.com/OSokunbi/oreo">oreo</a>
             </span>
         </footer>
         </html>
