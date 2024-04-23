@@ -1,6 +1,3 @@
-### a brief overview
-oreo was entirely created by me (oreoluwa). i created it in an attempt to make creating and publioshing your own blog site easy and accessible to all
-
 ### installing and using oreo
 to get started on installing and creating your blogs using oreo first create a githu repo. then create a [clone](http://github.com/OSokunbi/) of the oreo github repo. then open up your cloned repo using your code editor of choice.
 
