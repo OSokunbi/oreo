@@ -1,0 +1,5 @@
+# Python Bytecode Cache
+**/__pycache__/
+
+# OS Metadata
+**/.DS_Store

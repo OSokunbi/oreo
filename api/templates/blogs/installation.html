@@ -1,0 +1,129 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ʕ •ᴥ•ʔ How to Install Oreo
+ | your blog
+</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [["$", "$"], ["\\(", "\\)"]],
+                displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+                processEscapes: true
+            },
+            config: ["MMLorHTML.js"],
+            jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+            extensions: ["MathMenu.js", "MathZoom.js"]
+        });
+    </script>
+    </head>
+    <header>
+    <a class="title" href=""> <h1> your blog
+ </h1> </a>
+        <nav><p><a href="{{ url_for('index') }}">Home</a><a href="{{ url_for('dir') }}">Blog</a></p></nav>
+        </header>
+        <main>
+        <h1>ʕ •ᴥ•ʔ How to Install Oreo
+</h1>
+        <p>
+            <i>
+            <time datetime="2024-03-01">01 Mar, 2024</time></i>
+            </p>
+            <body>
+            <h3>installing and using oreo</h3>
+<p>to get started on installing and creating your blogs using oreo first create a githu repo. then create a <a href="http://github.com/OSokunbi/">clone</a> of the oreo github repo. then open up your cloned repo using your code editor of choice.</p>
+<p>now follow these commands:</p>
+<div class="codehilite"><pre><span></span><code>git remote remove origin
+rm -rf .git
+git init
+git branch -M main
+git add -A
+git commit -m &quot;initial commit&quot;
+git remote add origin https://github.com/YOU/YOUR_GITHUB_REPO_NAME
+git push -u origin main
+</code></pre></div>
+
+<p>after doing this delete the README.md file</p>
+<h3>getting started</h3>
+<p>all pages and blogs in oreos are written in <a href="https://www.markdownguide.org/basic-syntax/">markdown syntax</a></p>
+<p>to get started run the following command:</p>
+<div class="codehilite"><pre><span></span><code>python oreos.py
+</code></pre></div>
+
+<p>after running this a list of options should appear, to get started first type in <strong>update title</strong>. this will change the title of your blog. to dorun the command in oreo:</p>
+<div class="codehilite"><pre><span></span><code>update title
+</code></pre></div>
+
+<h3>creating the site</h3>
+<p>host your blog site using <a href="https://vercel.com/dashboard/">vercel</a>. simply add your blog's github repo as the github repo your vercel project should refer to and you shoudl be all set from there.</p>
+<h3>understanding oreo commands</h3>
+<h4>add blog</h4>
+<p>in order to add blog post you must first make a markdown file ending in <strong>.md</strong>. after doing this you want to drag that markdown file into the md_blogs folder. then runn the following command in oreo:</p>
+<div class="codehilite"><pre><span></span><code>add blog
+</code></pre></div>
+
+<p>this command is pretty simple and straightforward, it will prompt you to enter the name of the blog post that you would like to add to your blog. you must then enter the name of the markdown file that you added in. for exampleif i added a new markdown file called hello.md i would type hello.md whenprompted with the name of the markdown file.</p>
+<h4>update home</h4>
+<p>this command is pretty simple as well, after making changes to home.md you can run the following command in oreo:</p>
+<div class="codehilite"><pre><span></span><code>update home
+</code></pre></div>
+
+<p>this command will apply all the changes that you made in home.md to your homepage</p>
+<h4>update dir</h4>
+<p>another straightforward command. this command will update your blogs directory if any changes are needed that were not automatically applied during
+the adding of a new post, or if you want to do things such as manually change the date that a post if attached to inside of its corresponding html file. to run this command in oreo type:</p>
+<div class="codehilite"><pre><span></span><code>update dir
+</code></pre></div>
+
+<h4>add page</h4>
+<p>this command will add another page to your blog site. to run this command in oreo you must first create a new markdown file for your new page in the md_pages folder and run:</p>
+<div class="codehilite"><pre><span></span><code>add page
+</code></pre></div>
+
+<p>this will automatically rebuild the navbar to add a navigation url to your new page on every single page, including all your posts as well as add your new page.</p>
+<h4>exit</h4>
+<p>this commands is used to exit oreo. to run this command in oreo type:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">exit</span>
+</code></pre></div>
+
+<p>this will exit out of oreo as well as update your blog push all the changes to your blog's github repo</p>
+<h2>structures</h2>
+<h3>md_blogs structure</h3>
+<p>here is the structure for how your markdown blogs should look:</p>
+<div class="codehilite"><pre><span></span><code>First line : (Blog Title)
+Second Line: (Date in this format: 2024-03-04)
+(write here)
+</code></pre></div>
+
+<p>here's an example:</p>
+<div class="codehilite"><pre><span></span><code>Example Blog
+2024-01-01
+(write markdown syntax here)
+</code></pre></div>
+
+<h3>page structures</h3>
+<p>here is the structure for how your markdown blogs should look:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">First</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span>:<span class="w"> </span><span class="ss">(</span><span class="nv">Page</span><span class="w"> </span><span class="nv">Title</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">Navbar</span><span class="ss">)</span>
+<span class="ss">(</span><span class="nv">write</span><span class="w"> </span><span class="nv">here</span><span class="ss">)</span>
+</code></pre></div>
+
+<p>here's an example:</p>
+<div class="codehilite"><pre><span></span><code>Books
+(write markdown syntax here)
+</code></pre></div>
+            </body>
+            </main>
+            <footer style="padding:25px 0;">
+                <span>
+                built with <a href="https://github.com/OSokunbi/oreo">oreo</a>
+                </span>
+            </footer>
+            </html>
+            

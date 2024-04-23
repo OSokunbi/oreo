@@ -1,0 +1,28 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blogs | your blog
+</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        </head>
+        <header>
+        <a class="title" href=""> <h1> your blog
+ </h1> </a>
+        <nav><p><a href="{{ url_for('index') }}">Home</a><a href="{{ url_for('dir') }}">Blog</a></p></nav>
+        </header>
+    <main>
+        <p class='blog-posts'>
+            <span><time>01 Mar, 2024</span><a href = "{{ url_for('get_blog', post_id='installation') }}" >ʕ •ᴥ•ʔ How to Install Oreo</a><br>
+        </p>
+        </main>
+        <footer style="padding:25px 0;">
+            <span>
+            built with <a href="https://github.com/OSokunbi/oreo">oreo</a>
+            </span>
+        </footer>
+        </html>
+        
